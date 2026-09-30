@@ -104,9 +104,8 @@ is not trustworthy — more capacity without more regularization simply overfits
 ## Repository Structure
 
 ```
-CSCA5642-CNN-Cancer-Detection-Kaggle/
-├── cnn-medical-image-classification.ipynb          # Main study: EDA → modeling → results
-├── csca-5642-week-3-cnn-cancer-detection.ipynb     # Original competition-framed version
+CNNs-for-Cancer-Image-Patch-Classification/
+├── cnn-medical-image-classification.ipynb   # Full study: EDA → modeling → results
 └── README.md
 ```
 
@@ -114,8 +113,8 @@ CSCA5642-CNN-Cancer-Detection-Kaggle/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/<your-username>/CSCA5642-CNN-Cancer-Detection-Kaggle.git
-   cd CSCA5642-CNN-Cancer-Detection-Kaggle
+   git clone https://github.com/abrahamperz/CNNs-for-Cancer-Image-Patch-Classification.git
+   cd CNNs-for-Cancer-Image-Patch-Classification
    ```
 2. **Get the data.** Either run the notebook directly on Kaggle (the dataset is
    attached automatically), or download it locally via the
