@@ -66,6 +66,11 @@ evaluation — lives in a single, self-documenting notebook.
 | **Model #1** | 3 conv blocks + 1 dense head (baseline) | 159,041 |
 | **Model #2** | 5 conv blocks + batch norm | 1,702,145 |
 | **Model #3** | 5 conv blocks + deeper dense head | 2,610,945 |
+| **Model #4** | Model #2 base + data augmentation | 1,702,145 |
+| **Model #5** | Transfer learning — MobileNetV2 + head | ~2.3M |
+
+> Models #4 and #5 are implemented in the notebook and ready to run on Kaggle;
+> their scores are pending a training run (see [Future Work](#future-work)).
 
 ## Results
 
@@ -119,10 +124,14 @@ CSCA5642-CNN-Cancer-Detection-Kaggle/
 
 ## Future Work
 
-- Add **data augmentation** (rotations, flips, skews) to enlarge and diversify
-  the training set.
+**Implemented in the notebook (pending a Kaggle training run):**
+- ✅ **Data augmentation** (random flips, rotation, zoom) — Model #4.
+- ✅ **Transfer learning** with a pre-trained MobileNetV2 backbone, plus optional
+  fine-tuning — Model #5.
+
+**Still open:**
 - Use **streaming input pipelines** (`tf.data`) to train on the full dataset
   without memory limits.
-- Explore **transfer learning** with pre-trained backbones.
-- Tune non-default hyperparameters (learning rate schedules, conv strides,
+- Tune non-default hyperparameters (learning-rate schedules, conv strides,
   batch-norm momentum).
+- Try additional pre-trained backbones (EfficientNet, ResNet) and compare.
